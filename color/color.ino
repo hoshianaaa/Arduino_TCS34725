@@ -68,7 +68,30 @@ void loop() {
  // Serial.print(""); Serial.print(clear);
   Serial.print(" "); Serial.print(red);
   Serial.print(" "); Serial.print(green);
-  Serial.print(" "); Serial.println(blue);
+  Serial.print(" "); Serial.print(blue);
+  Serial.print(" ");
+
+
+  char color = 'n';
+
+
+    if (red < 45 && green < 45 && blue > 25){
+    color = 'b';
+    Serial.println(color);
+  }
+
+    else if (red > 50 && green > 30){
+    color = 'y';
+    Serial.println(color);
+  }
+    else if (red > 35 && green  > 25 && blue > 15){
+    color = 'r';
+    Serial.println(color);
+  }
+  else 
+  {
+    Serial.println("n");
+  }
 
   
   // Figure out some basic hex code for visualization
@@ -87,4 +110,35 @@ void loop() {
  // analogWrite(redpin, gammatable[(int)r]);
  // analogWrite(greenpin, gammatable[(int)g]);
  // analogWrite(bluepin, gammatable[(int)b]);
+
+ /*
+  * 
+  * blue 
+  * 25 27 23
+  * 23 26 23
+  * 20 24 21
+  * 27 29 25
+  * 26 29 25
+  * 
+  * yellow
+  * 51 39 21
+  * 48 37 19
+  * 50 39 21
+  * 51 40 22
+  * 49 38 20
+  * 
+  * none 
+  * 47 39 26
+  * 49 39 26
+  * 49 39 26
+  * 49 39 26
+  * 50 39 25
+  * 
+  * red
+  * 32 26 19
+  * 29 23 17
+  * 31 25 18
+  */
+
+  
 }
